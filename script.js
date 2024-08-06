@@ -20,8 +20,11 @@ const increaseScore=(winner)=>{
         msgbox.style.backgroundColor="red"
     }
 }
-const printWinner=(winner)=>{
-    msgbox.innerText=`Winner is ${winner}` 
+const printWinner=(winner,user,com)=>{
+    if(winner=='You')
+    msgbox.innerText=`Your : ${user} has won over com :${com} ` 
+    else
+    msgbox.innerText=`Com : ${com} has won over com :${user} ` 
 
 }
 const comChoice=()=>{
@@ -53,7 +56,7 @@ else{
         winner=(com=="Paper")?"You":"Com"
     }
     console.log("winner is "+winner )
-    printWinner(winner)
+    printWinner(winner ,user,com)
     increaseScore(winner)
  
 }
