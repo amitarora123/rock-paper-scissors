@@ -30,7 +30,7 @@ const comChoice=()=>{
 }
 const printDraw=()=>{
     msgbox.innerText=`The game is Draw` 
-    
+    msgbox.style.backgroundColor="black"
 }
 const chkwin=(user)=>{
     const com=comChoice()
